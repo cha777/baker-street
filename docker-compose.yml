@@ -1,0 +1,17 @@
+services:
+  baker-street-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: baker-street-bot
+    restart: unless-stopped
+    shm_size: '1gb'
+    env_file:
+      - .env
+    environment:
+      - HEADLESS=true
+      - TIMEZONE=Asia/Colombo
+    volumes:
+      - ./data:/app/data
+      - ./.auth:/app/.auth
+      - ./debug-dump:/app/debug-dump

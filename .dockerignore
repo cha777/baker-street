@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.auth
+data
+debug-dump
+.bot.pid
+*.log
+.git
+.DS_Store
