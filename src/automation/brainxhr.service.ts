@@ -37,6 +37,7 @@ export class BrainxHRService {
 
     const browser = await chromium.launch({
       headless: config.headless,
+      executablePath: process.env.CHROMIUM_EXECUTABLE_PATH || undefined,
       args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
     });
 

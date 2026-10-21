@@ -1,8 +1,11 @@
 services:
   baker-street-bot:
+    image: baker-street-bot:latest
     build:
       context: .
       dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
     container_name: baker-street-bot
     restart: unless-stopped
     shm_size: '1gb'

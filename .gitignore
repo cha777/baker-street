@@ -4,5 +4,8 @@ dist/
 .auth/
 data/
 debug-dump/
+.bot.pid
 *.log
+*.tar
+*.tar.gz
 .DS_Store
